@@ -8,5 +8,5 @@ export default defineConfig({
     react(),
     tailwindcss()
   ],
-  base: '/ethans-calcs',
+  base: '/ethans-calcs/',
 })
