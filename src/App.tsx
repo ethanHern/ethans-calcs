@@ -1,30 +1,32 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from "./home";
-import AddSub from "./matrix-calculator/add-sub";
-import Navbar from "./components/Navbar";
-import Calculator from "./calculator";
-import Multiplication from "./matrix-calculator/multiplication";
-import MatrixHome from "./matrix-home";
-import Elimination from "./matrix-calculator/elimination";
-import Inverse from "./matrix-calculator/inverse";
-import QRFactorization from "./matrix-calculator/qr_factorization";
+import {lazy, Suspense} from 'react';
+
+const Home = lazy(()=> import("./home"));
+const AddSub = lazy(()=> import("./matrix-calculator/add-sub"));
+const Navbar = lazy(()=> import("./components/Navbar"));
+const Multiplication = lazy(()=> import("./matrix-calculator/multiplication"));
+const MatrixHome = lazy(()=> import("./matrix-home"));
+const Elimination = lazy(()=>import("./matrix-calculator/elimination"));
+const Inverse = lazy(()=> import("./matrix-calculator/inverse"));
+const QRFactorization = lazy(()=> import("./matrix-calculator/qr_factorization"));
 
 export default function App() {
 
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename="/ethans-calcs">
         <Navbar/>
-        <Routes>
-          <Route path="/" element={<Home/>} />
-          <Route path="/calculator" element={<Calculator/>}/>
-          <Route path="/matrix-calculator" element={<MatrixHome/>} />
-          <Route path="/matrix-calculator/add-sub" element={<AddSub/>}/>
-          <Route path="/matrix-calculator/multiplication" element={<Multiplication/>}/>
-          <Route path="/matrix-calculator/elimination" element={<Elimination/>}/>
-          <Route path="/matrix-calculator/inverse" element={<Inverse/>}/>
-          <Route path="/matrix-calculator/qr_factorization" element={<QRFactorization/>}/>
-        </Routes>
+        <Suspense fallback={<div>Loading Calculator...</div>}>
+          <Routes>
+            <Route path="/" element={<Home/>} />
+            <Route path="/matrix-calculator" element={<MatrixHome/>} />
+            <Route path="/matrix-calculator/add-sub" element={<AddSub/>}/>
+            <Route path="/matrix-calculator/multiplication" element={<Multiplication/>}/>
+            <Route path="/matrix-calculator/elimination" element={<Elimination/>}/>
+            <Route path="/matrix-calculator/inverse" element={<Inverse/>}/>
+            <Route path="/matrix-calculator/qr_factorization" element={<QRFactorization/>}/>
+          </Routes>
+        </Suspense>
       </BrowserRouter>
     </>
   )
