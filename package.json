@@ -1,5 +1,6 @@
 {
   "name": "ethans-calcs",
+  "homepage": "https://ethanHern.github.io/ethans-calcs",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -11,6 +12,7 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.3.0",
+    "gh-pages": "^6.3.0",
     "react": "^19.2.6",
     "react-dom": "^19.2.6",
     "react-helmet-async": "^3.0.0",
