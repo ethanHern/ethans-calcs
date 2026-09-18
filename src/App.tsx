@@ -14,7 +14,7 @@ export default function App() {
 
   return (
     <>
-      <BrowserRouter basename="/ethans-calcs">
+      <BrowserRouter basename="ethans-calcs">
         <Navbar/>
         <Suspense fallback={<div>Loading Calculator...</div>}>
           <Routes>
