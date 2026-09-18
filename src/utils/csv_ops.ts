@@ -19,11 +19,11 @@ export function ReadCSV(file: File, setMatrixFunction: (value: SetStateAction<Ma
     reader.readAsText(file);
 }
 
-const noDigits = /^[^0-9]+/;
-function CleanCSV(text: string[][]): StringMatrix {
-    let cleaned_text = text.slice(0, -1);
-    for (const row in cleaned_text){ // Remove spaces from CSV cells
-        row.replace(' ', '');
-    }
-    return cleaned_text;
-}
+//const noDigits = /^[^0-9]+/;
+//function CleanCSV(text: string[][]): StringMatrix {
+//    let cleaned_text = text.slice(0, -1);
+//    for (const row in cleaned_text){ // Remove spaces from CSV cells
+//        row.replace(' ', '');
+//    }
+//    return cleaned_text;
+//}

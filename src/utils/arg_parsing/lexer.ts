@@ -6,9 +6,7 @@
     Make a tree of those tokens
 
 */
-interface Token {
 
-}
 
 export function CleanExpression(input: string): string {
     let result = input.replaceAll(' ', '');

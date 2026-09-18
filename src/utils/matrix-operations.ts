@@ -1,4 +1,5 @@
-import { CreateBlockMatrix, CreateIdentity, GetMatrixColumns, GetMatrixRows, MatrixMethods, SwapRows, VectorMethods, type Matrix, type Vector } from "./matrix";
+import { CreateBlockMatrix, CreateIdentity, GetMatrixColumns, GetMatrixRows, MatrixMethods, SwapRows, type Matrix, } from "./matrix";
+import { type Vector, VectorMethods } from "./vector";
 
 export type MatrixData = {
     name: string,
