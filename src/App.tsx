@@ -16,7 +16,7 @@ export default function App() {
     <>
       <BrowserRouter basename="ethans-calcs">
         <Navbar/>
-        <Suspense fallback={<div>Loading Calculator...</div>}>
+        <Suspense fallback={<div className="flex"><p className="self-center">Loading Calculator..</p></div>}>
           <Routes>
             <Route path="/" element={<Home/>} />
             <Route path="/matrix-calculator" element={<MatrixHome/>} />
