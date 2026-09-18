@@ -16,11 +16,11 @@ export default function Navbar() {
                     <img src={logo} alt={"Ethan's\n Calcs"} width={93} height={45}/>
                 </Link>
             </div>
-            <LinkBox
+            {/* <LinkBox
                 description="A normal calculator" link={'/calculator'}
                 name='Calculator' rounded={true}
                 />
-            |
+            | */}
             {/* Matrix Dropdown */}
             <div className="relative">
                 <div className={`flex items-center overflow-hidden ${matrixIsOpen ? 'rounded-t-sm inset-shadow-md' : 'rounded-sm'}`}>
