@@ -1,0 +1,1 @@
+import{r as e,t}from"./index-GK0zr2J5.js";var n=t();function r(){return(0,n.jsx)(`div`,{children:(0,n.jsx)(e,{children:(0,n.jsx)(`title`,{children:`Matrix Calculators`})})})}export{r as default};
