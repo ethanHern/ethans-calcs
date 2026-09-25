@@ -1,0 +1,1 @@
+import{t as e}from"./jsx-runtime-DGeXAQPT.js";import{n as t}from"./index-AP1uXIAE.js";var n=e();function r(){return(0,n.jsx)(`div`,{children:(0,n.jsx)(t,{children:(0,n.jsx)(`title`,{children:`Ethan's Calcs`})})})}export{r as default};
