@@ -1,7 +1,5 @@
 
-
-export default function VecAddSub() {
-
+export default function VectorHome() {
     return (
         <div>
             
