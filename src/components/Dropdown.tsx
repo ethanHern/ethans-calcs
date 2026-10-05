@@ -1,5 +1,4 @@
 import { useEffect, useState, type ReactNode } from "react";
-import LinkBox from "./LinkBox";
 
 type DropDownProps = {
     name: string,
@@ -24,12 +23,11 @@ export default function Dropdown({name, to, children}: DropDownProps) {
 
     return (
         <div className="relative">
-            <div className={`flex items-center overflow-hidden ${isOpen ? 'rounded-t-sm inset-shadow-md' : 'rounded-sm'}`}>
-                <LinkBox
-                    description={name} link={to}
-                    name={name}
-                    className="border-r-2 border-gray-100 p-1"
-                />
+            <div className={`flex items-center overflow-hidden ${isOpen ? 'rounded-t-sm inset-shadow-md' : 'rounded-sm'}`} onClick={toggleDropdown}>
+                {/* For when I actually make a home page for each dropdown
+                <LinkBox description={name} link={to} name={name} className="border-r-2 border-gray-100 p-1" />
+                */}
+                <div className="hover:bg-gray-200 active:bg-gray-300 hover:inset-shadow-md hover:text-shadow-sm border-r-2 border-gray-100 p-1">{name}</div>
                 <div className={`py-1 px-1 hover:bg-gray-200 active:bg-gray-300 hover:inset-shadow-md hover:cursor-pointer ${isOpen && 'bg-gray-200 inset-shadow-md'}`} onClick={toggleDropdown}>▼</div>
             </div>
             {isOpen && (
