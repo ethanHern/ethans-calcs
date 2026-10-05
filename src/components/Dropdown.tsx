@@ -2,10 +2,9 @@ import { useEffect, useState, type ReactNode } from "react";
 
 type DropDownProps = {
     name: string,
-    to: string,
     children: ReactNode
 }
-export default function Dropdown({name, to, children}: DropDownProps) {
+export default function Dropdown({name, children}: DropDownProps) {
     const [isOpen, setIsOpen] = useState<boolean>(false);
 
     useEffect(()=> {

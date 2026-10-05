@@ -15,7 +15,7 @@ export default function Navbar() {
             </div>
 
             {/* Matrix Dropdown */}
-            <Dropdown name={"Matrix Calculators"} to={'/matrix-calculator'}>
+            <Dropdown name={"Matrix Calculators"}>
                 <LinkBox description={"Add or subtract two matrices"} link={'/matrix-calculator/add-sub'} name="Add/Sub"/>
                 <LinkBox description={"Multiply two matrices"} link={'/matrix-calculator/multiplication'} name="Multiplication" />
                 <LinkBox description={"Perform Gaussian or Gauss-Jordan Elimination on a matrix"} link={'/matrix-calculator/elimination'} name="Elimination" />
