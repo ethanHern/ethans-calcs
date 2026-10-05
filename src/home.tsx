@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet-async";
+import Logo from '../public/Logo.svg?react';
 
 export default function Home() {
     return (
@@ -6,5 +7,11 @@ export default function Home() {
             <Helmet>
                 <title>Ethan's Calcs</title>
             </Helmet>
+            <div className="bg-blue-200 flex h-screen px-8">
+                <div className="flex-col bg-green-500 h-screen flex-1 self-start items-center">
+                    <p>This should be in the middle</p>
+                    <Logo />
+                </div>
+            </div>
         </div>)
 }
